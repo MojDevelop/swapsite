@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #6a0dad; /* Your purple background color */
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+}
+
+
+@keyframes moveLeftRight {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes moveRightLeft {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+}
+
+.animate-blastoff {
+    animation: moveLeftRight 2s infinite;
+}
+
+.animate-tapswap {
+    animation: moveRightLeft 2s infinite;
+}
+
+.app{
+    display: grid;
+    grid-template-areas:
+            "main"
+            "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10rem;
+    height: 100vh;
+    place-content: center;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+/* src/App.css */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.glass{
+    background-color: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    opacity: 10;
+}
+.glasses{
+    background-color: rgb(113, 143, 148,0.1);
+    backdrop-filter: blur(3px);
+    opacity: 10;
+}
