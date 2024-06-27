@@ -4,7 +4,6 @@ import { loadSlim } from "@tsparticles/slim";
 
 const App = () => {
     const [init, setInit] = useState(false);
-
     // this should be run only once per application lifetime
     useEffect(() => {
         initParticlesEngine(async (engine) => {
